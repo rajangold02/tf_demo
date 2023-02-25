@@ -56,7 +56,7 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 resource "aws_instance" "aws_ubuntu" {
-  count                  = var.count
+  count                  = var.instance_count
   instance_type          = "t2.micro"
   ami                    = data.aws_ami.aws_ubuntu.id
   key_name               = var.key_name
